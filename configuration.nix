@@ -3,10 +3,9 @@
 {
   imports = [
     ./hardware-configuration.nix
+    (builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz")
   ];
   
-  home-manager.enable = true;
-
   boot.kernelPackages = pkgs.linuxPackages_zen;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
