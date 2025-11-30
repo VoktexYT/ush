@@ -3,10 +3,11 @@
 {
   imports = [
     ./hardware-configuration.nix
-    (builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz")
   ];
+  
+  home-manager.enable = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   networking.wireless.iwd.enable = true;
@@ -27,5 +28,5 @@
   ];
 
   home-manager.users.ton_user = import ./home.nix;
-  system.stateVersion = "25.11";
+  system.stateVersion = "24.05";
 }
