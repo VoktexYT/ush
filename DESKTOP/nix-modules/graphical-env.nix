@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.sway.enable = true;
@@ -17,8 +22,9 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "matrix";
+      animation = "colormix";
       clock = "%c";
+      bigclock = "en";
       hide_borders = false;
       vi_mode = false;
     };
