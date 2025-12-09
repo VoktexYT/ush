@@ -41,10 +41,12 @@ set $ws3 3
 set $ws4 4
 
 # Apps
-bindsym $mod+t exec kitty --single-instance 
-bindsym $mod+Return exec kitty --single-instance 
-bindsym $mod+w exec qutebrowser
+bindsym $mod+t exec kitty --single-instance
+bindsym $mod+Return exec kitty --single-instance
+bindsym $mod+w exec firefox
 bindsym $mod+n exec kitty --single-instance -e nvim
+bindsym $mod+d exec wofi --show drun
+bindsym $mod+s exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png
 
 # Navigation vim-style
 bindsym $mod+h focus left

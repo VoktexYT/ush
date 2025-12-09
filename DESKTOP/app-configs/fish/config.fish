@@ -4,3 +4,6 @@ end
 
 clear
 
+# Aliases
+alias ff='firefox'
+alias lv='nvim'
