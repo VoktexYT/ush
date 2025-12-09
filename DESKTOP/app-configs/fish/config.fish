@@ -4,3 +4,5 @@ end
 
 clear
 
+# Aliases
+alias ff='firefox'
