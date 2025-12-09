@@ -2,17 +2,17 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 
 exec waybar
 
-# Gruvbox Dark colors
-set $bg     #282828
-set $fg     #ebdbb2
-set $red    #cc241d
-set $green  #98971a
-set $yellow #d79921
-set $blue   #458588
-set $purple #b16286
-set $aqua   #689d6a
-set $gray   #a89984
-set $orange #d65d0e
+# Tokyo Night colors (blue/cold/dark theme)
+set $bg     #1a1b26
+set $fg     #c0caf5
+set $red    #f7768e
+set $green  #9ece6a
+set $yellow #e0af68
+set $blue   #7aa2f7
+set $purple #bb9af7
+set $aqua   #7dcfff
+set $gray   #565f89
+set $orange #ff9e64
 
 # Font
 font pango:JetBrains Mono 10
@@ -29,9 +29,9 @@ gaps outer 10
 default_border pixel 2
 default_floating_border pixel 2
 
-# Gruvbox window colors
+# Tokyo Night window colors
 #                       border  bg      text    indicator child_border
-client.focused          $orange $orange $orange $orange   $orange
+client.focused          $blue   $blue   $blue   $blue     $blue
 client.unfocused        $bg     $bg     $bg     $bg       $bg
 
 # Workspaces
