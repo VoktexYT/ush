@@ -43,7 +43,7 @@ set $ws4 4
 # Apps
 bindsym $mod+t exec kitty --single-instance 
 bindsym $mod+Return exec kitty --single-instance 
-bindsym $mod+w exec qutebrowser
+bindsym $mod+w exec firefox
 bindsym $mod+n exec kitty --single-instance -e nvim
 
 # Navigation vim-style
