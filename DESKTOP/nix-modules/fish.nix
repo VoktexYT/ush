@@ -1,16 +1,20 @@
 { config, lib, pkgs, user, ... }:
+
+let
+  themePath = ../app-configs/themes/${config.customTheme};
+in
 {
   system.activationScripts.installFishConfig = {
     text = ''
-      SOURCE="${../app-configs/fish}"
+      SOURCE="${themePath}/fish"
       TARGET="/home/${user}/.config/fish"
 
       echo -e "\033[93m ### INIT FISH CONFIG FOR ${user} ### \033[0m"
       
       mkdir -p /home/${user}/.config
-      
+
       if [ -d "$TARGET" ]; then
-        rm -R "$TARGET"
+        rm -rf "$TARGET"
       fi
 
       cp -rL "$SOURCE" "$TARGET"

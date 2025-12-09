@@ -5,8 +5,17 @@
   _module.args.user = "zalleous";
   #######################################
 
+  ########## LOCALE ######################
+  i18n.defaultLocale = "en_CA.UTF-8";
+  #######################################
+
+  ########## THEME #######################
+  customTheme = "tokyo-night"; # or "gruvbox"
+  #######################################
+
   imports = [
     ./hardware-configuration.nix
+    ./nix-modules/theme.nix
     ./nix-modules/programs.nix
     ./nix-modules/graphical-env.nix
     ./nix-modules/hardware.nix
